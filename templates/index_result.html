@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Meaning - Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .result {
+            margin-top: 20px;
+            text-align: center;
+        }
+        p {
+            color: #333;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        a:hover {
+            color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Name Meaning</h1>
+        <div class="result">
+            {% if meaning %}
+                <p><strong>{{ name }}</strong>, the meaning of your name is:</p>
+                <p><em>{{ meaning }}</em></p>
+            {% elif error %}
+                <p>{{ error }}</p>
+            {% endif %}
+        </div>
+        <a href="/"><button type="button">Back to Home</button></a>
+    </div>
+</body>
+</html>
